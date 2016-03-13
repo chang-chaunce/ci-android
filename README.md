@@ -2,7 +2,9 @@
 
 一个基于 [Docker](https://www.docker.com/) 的 [Android](http://www.android.com/) 编译环境镜像，已安装了JDK，Android SDK，可用于持续集成。
 
-[![Build Status](https://api.travis-ci.org/lijy91/ci-android.svg?branch=master)](https://travis-ci.org/lijy91/ci-android)
+基于原作者[lijy91/ci-android](https://github.com/lijy91/ci-android)的项目进行修改，在此表示感谢。
+
+[![Build Status](https://travis-ci.org/chang-chaunce/ci-android.svg?branch=master)](https://travis-ci.org/chang-chaunce/ci-android)
 
 ## 如何使用
 
@@ -38,7 +40,7 @@ script:
 
 ## License
 
-    Copyright (C) 2015 JianyingLi <lijy91@foxmail.com>
+    Copyright (C) 2016 Chaunce <chang.chaunce@gmail.com>
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
