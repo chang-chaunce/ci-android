@@ -37,6 +37,13 @@ RUN echo yes | android update sdk --no-ui --all --filter platform-tools         
     echo yes | android update sdk --no-ui --all --filter build-tools-23.0.2         && \
     echo yes | android update sdk --no-ui --all --filter android-23                 && \
     echo yes | android update sdk --no-ui --all --filter android-22                 && \
+    echo yes | android update sdk --no-ui --all --filter android-21                 && \
+    echo yes | android update sdk --no-ui --all --filter android-20                 && \
+    echo yes | android update sdk --no-ui --all --filter android-19                 && \
+    echo yes | android update sdk --no-ui --all --filter android-18                 && \
+    echo yes | android update sdk --no-ui --all --filter android-17                 && \
+    echo yes | android update sdk --no-ui --all --filter android-16                 && \
+    echo yes | android update sdk --no-ui --all --filter android-15                 && \
     echo yes | android update sdk --no-ui --all --filter extra-android-m2repository && \
     echo yes | android update sdk --no-ui --all --filter extra-google-m2repository  && \
     echo yes | android update sdk --no-ui --all --filter extra-android-support
