@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER JianyingLi <lijy91@foxmail.com>
+MAINTAINER Chaunce <chang.chaunce@gmail.com>
 
 RUN dpkg --add-architecture i386                                    && \
     apt-get update                                                  && \
