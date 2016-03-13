@@ -8,16 +8,16 @@
 
 ## 如何使用
 
-该镜像已经发布到 DaoCloud 的公共仓库中，直接使用 [daocloud.io/lijy91/ci-android](https://dashboard.daocloud.io/packages/dcbc375b-58a1-467b-9c88-73e476901c32) 镜像即可。
+该镜像已经发布到 hub.docker.com 的公共仓库中，直接使用 [https://hub.docker.com/r/chaunce/ci-android/](https://hub.docker.com/r/chaunce/ci-android/) 镜像即可。
 
 Dockerfile
 ```
-FROM daocloud.io/lijy91/ci-android
+FROM /chaunce/ci-android
 ```
 
 daocloud.yml
 ```
-image: daocloud.io/lijy91/ci-android
+image: /chaunce/ci-android
 ```
 
 ## 应用于 [DaoCloud CI](https://www.daocloud.io/)
