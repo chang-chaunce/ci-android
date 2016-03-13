@@ -18,16 +18,19 @@ RUN dpkg --add-architecture i386                                    && \
 # Install openJDK Java
 RUN apt-get install -y $JAVA_VERSION
 
-# Install oracle Java
-RUN add-apt-repository -y ppa:webupd8team/java 
-# Install oracle Java7 
-RUN echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
-RUN apt-get install -y oracle-java7-installer 
-# Install oracle Java8 
-RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
-RUN apt-get install -y oracle-java8-installer
+# 安装 Java 7
+RUN wget -q --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz && \
+    tar -xzf jdk-7u79-linux-x64.tar.gz -C /usr/local && \
+    rm jdk-7u79-linux-x64.tar.gz && \
+# 安装 Java 8
+    wget -q --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u66-b17/jdk-8u66-linux-x64.tar.gz && \
+    tar -xzf jdk-8u66-linux-x64.tar.gz -C /usr/local && \
+    rm jdk-8u66-linux-x64.tar.gz
 
-
+# 配置 Java 环境变量
+ENV JAVA7_HOME /usr/local/jdk1.7.0_79
+ENV JAVA8_HOME /usr/local/jdk1.8.0_66
+ENV JAVA_HOME /usr/local/jdk1.7.0_79
 
 # Gradle Environment 
 ENV GRADLE_HOME /gradle-${GRADLE_VERSION} 
