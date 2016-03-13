@@ -12,19 +12,19 @@
 
 Dockerfile
 ```
-FROM /chaunce/ci-android
+FROM index.docker.io/chaunce/ci-android
 ```
 
 daocloud.yml
 ```
-image: /chaunce/ci-android
+image: index.docker.io/chaunce/ci-android
 ```
 
 ## 应用于 [DaoCloud CI](https://www.daocloud.io/)
 
 在项目根目录创建一个 `daocloud.yml` 文件来开启你的持续集成服务。
 ```yml
-image: daocloud.io/lijy91/ci-android
+image: index.docker.io/chaunce/ci-android
 
 script:
     - ./gradlew app:assembleDebug --debug
